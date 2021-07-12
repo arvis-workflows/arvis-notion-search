@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jopemachine/arvis-extension-validator/master/workflow-schema.json",
+  "defaultIcon": "icon.png",
+  "category": "Productivity",
+  "creator": "Otis Chou",
+  "description": "Quick search for Notion",
+  "name": "arvis-notion-search",
+  "readme": "",
+  "version": "0.0.4",
+  "webAddress": "https://github.com/arvis-workflows/arvis-notion-search",
+  "enabled": true,
+  "variables": {
+    "space_id": "",
+    "token_v2": ""
+  },
+  "commands": [
+    {
+      "type": "scriptFilter",
+      "command": "ns",
+      "title": "Search Notion",
+      "subtitle": "Search Notion for '...'",
+      "scriptFilter": "node -r esm index.js \"{query}\"",
+      "runningSubtext": "Searching...",
+      "withspace": true,
+      "argType": "required",
+      "actions": [
+        {
+          "modifiers": "normal",
+          "type": "open",
+          "target": "{query}"
+        }
+      ]
+    }
+  ]
+}
