@@ -1,4 +1,4 @@
-# arvis Notion Search
+# arvis-notion-search
 
 > arvis workflow for searching Notion.
 
